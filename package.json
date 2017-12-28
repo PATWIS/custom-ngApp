@@ -4,8 +4,11 @@
   "description": "custom app using AngularJs, ES6 and Webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config config/webpack.config.js"
   },
   "author": "PATWIS",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
 }
