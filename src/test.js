@@ -1,6 +1,1 @@
-// var foo = 1234;
-
-
-// export default foo;
-
-exports.foo = 232323;
+exports.foo = 'hello from Webpack';

@@ -1,10 +1,11 @@
-const {resolve} = require('path');
+const { resolve } = require('path');
 
 module.exports = {
   entry: './src/app.js',
   output: {
-    // path: resolve(__dirname, '../dist'),
-    path: 'C:\\Users\\Patryk\\Infoprojekt Sp. z o.o\\SPDevPWisniewski - testLibrary',
+    publicPath: "/dist/",
+    path: resolve(__dirname, '../dist'),
+    // path: 'C:\\Users\\Patryk\\Infoprojekt Sp. z o.o\\SPDevPWisniewski - testLibrary',
     filename: 'app.bundle.js'
   },
   module: {
@@ -18,6 +19,37 @@ module.exports = {
             presets: ['es2015']
           }
         }
+      },
+      {
+        test: /\.scss$/,
+        use: [{
+          loader: "style-loader"
+        }, {
+          loader: "css-loader"
+        }, {
+          loader: "sass-loader"
+        }]
+      },
+      // {
+      //   test: /\.(png|jpg|gif|svg)$/,
+      //   use: [
+      //     {
+      //       loader: 'file-loader',
+      //       options: {}
+      //     }
+      //   ]
+      // }
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10,
+              name: '[name].[ext]'
+            }
+          }
+        ]
       }
     ]
   }

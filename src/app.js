@@ -1,3 +1,4 @@
-var test = require('./test.js');
+require('./sass/main.scss')
+const test = require('./test.js');
 
-console.log(test);
+alert(test.foo)
