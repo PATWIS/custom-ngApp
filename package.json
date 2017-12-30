@@ -8,8 +8,9 @@
     "prebuild": "npm run clean",
     "build": "webpack",
     "preprod": "npm run clean",
-    "prod" : "webpack -p --env.prod",
-    "clean": "rimraf dist"
+    "prod": "webpack -p --env.prod",
+    "clean": "rimraf dist",
+    "server": "http-server dist -p 8081"
   },
   "author": "PATWIS",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",
+    "http-server": "^0.10.0",
     "node-sass": "^4.7.2",
     "rimraf": "^2.6.2",
     "sass-loader": "^6.0.6",
