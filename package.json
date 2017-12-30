@@ -4,9 +4,11 @@
   "description": "custom app using AngularJs, ES6 and Webpack",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config config/webpack.config.js --content-base src/",
+    "start": "webpack-dev-server --content-base src/ --env.dev",
     "prebuild": "npm run clean",
-    "build": "webpack --config config/webpack.config.js",
+    "build": "webpack",
+    "preprod": "npm run clean",
+    "prod" : "webpack -p --env.prod",
     "clean": "rimraf dist"
   },
   "author": "PATWIS",
