@@ -1,5 +1,6 @@
 const { resolve } = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/app.js',
   output: {
@@ -43,7 +44,7 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 10,
+              limit: 1000,
               name: '[name].[ext]'
             }
           }
@@ -53,5 +54,9 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin("styles.css"),
+    new HtmlWebpackPlugin({
+      title: 'My App',
+      template: 'src/index.html'
+    })
   ]
 };
