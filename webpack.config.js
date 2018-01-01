@@ -20,6 +20,7 @@ module.exports = function (env) {
       // path: 'C:\\Users\\Patryk\\Infoprojekt Sp. z o.o\\SPDevPWisniewski - testLibrary',
       filename: prod ? '[name].[chunkhash].js' : '[name].js'
     },
+    devtool: prod ? "source-map" : "cheap-module-eval-source-map",
     module: {
       rules: [
         {
