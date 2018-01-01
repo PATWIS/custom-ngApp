@@ -66,11 +66,15 @@ module.exports = function (env) {
     plugins: [
       new ExtractTextPlugin("styles.css"),
       new HtmlWebpackPlugin({
-        title: 'My App',
         template: 'src/index.html'
       }),
       new webpack.optimize.CommonsChunkPlugin({
         name: 'vendors'
+      }),
+
+      new webpack.DefinePlugin({
+        PRODUCTION: JSON.stringify(prod),
+        VERSION: JSON.stringify(require("./package.json").version),
       })
     ]
   }

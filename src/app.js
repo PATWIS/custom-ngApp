@@ -1,4 +1,8 @@
 require('./sass/main.scss')
 const test = require('./test.js');
 
-alert(test.foo)
+document.getElementById('version').innerHTML += VERSION;
+
+
+if (!PRODUCTION)
+alert('Development Version')
