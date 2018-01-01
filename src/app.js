@@ -1,8 +1,20 @@
-require('./sass/main.scss')
-const test = require('./test.js');
+require ('./sass/main.scss');
 
-document.getElementById('version').innerHTML += VERSION;
+function getModuleName(module) {
+    return module.name || module.default.name
+}
+
+let appDependencies = [
+    'ui.router'
+];
+
+let appModule = [
+    require('./home/home.module')
+];
+
+angular.module('patwisApp', appDependencies.concat(appModule.map(getModuleName)))
+.config(($stateProvider, $urlRouterProvider) => {
+    $urlRouterProvider.otherwise('/home');
+});
 
 
-if (!PRODUCTION)
-alert('Development Version')

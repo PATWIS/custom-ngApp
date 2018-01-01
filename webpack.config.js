@@ -1,7 +1,7 @@
 const { resolve } = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack')
+const webpack = require('webpack');
 module.exports = function (env) {
 
   let prod = env !== undefined && env.prod === true;
@@ -11,8 +11,8 @@ module.exports = function (env) {
   return {
     // entry: './src/app.js',
     entry: {
-      app: './src/app.js'
-      // vendors: ['angular']
+      app: './src/app.js',
+      vendors: ['angular', 'angular-ui-router']
     },
     output: {
       publicPath: dev ? '/dist/' : '',
