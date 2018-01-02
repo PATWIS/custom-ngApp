@@ -5,7 +5,7 @@ const HomeModule = angular.module('patwisApp.home', [])
         $stateProvider
             .state('home', {
                 url: '/home',
-                template: 'hello !!!',
+                template: require('./home.html'),
                 controller: HomeCtrl,
                 contorllerAs: 'home'
             });

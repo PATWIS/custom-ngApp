@@ -26,12 +26,14 @@ module.exports = function (env) {
         {
           test: /\.js$/,
           exclude: /(node_modules)/,
-          use: {
+          use: [
+            'ng-annotate-loader',
+            {
             loader: 'babel-loader',
             options: {
               presets: ['es2015']
             }
-          }
+          }]
         },
         {
           test: /\.scss$/,
@@ -41,15 +43,11 @@ module.exports = function (env) {
             use: "css-loader!sass-loader"
           })
         },
-        // {
-        //   test: /\.(png|jpg|gif|svg)$/,
-        //   use: [
-        //     {
-        //       loader: 'file-loader',
-        //       options: {}
-        //     }
-        //   ]
-        // }
+        {
+          test: /\.html$/,
+          use: 'raw-loader',        
+          exclude: resolve(__dirname, './index.html')
+        },
         {
           test: /\.(png|jpg|gif|svg)$/,
           use: [
