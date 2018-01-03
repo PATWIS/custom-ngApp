@@ -12,7 +12,7 @@ module.exports = function (env) {
     // entry: './src/app.js',
     entry: {
       app: './src/app.js',
-      vendors: ['angular', 'angular-ui-router']
+      vendors: ['angular', 'angular-ui-router', 'angular-animate', 'angular-aria', 'angular-material'], 
     },
     output: {
       publicPath: dev ? '/dist/' : '',

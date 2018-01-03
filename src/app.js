@@ -5,16 +5,22 @@ function getModuleName(module) {
 }
 
 let appDependencies = [
-    'ui.router'
+    'ui.router',
+    'ngMaterial'
 ];
 
 let appModule = [
-    require('./home/home.module')
+    require('./home/home.module'),
+    require('./navbar/navbar.module')
 ];
 
 angular.module('patwisApp', appDependencies.concat(appModule.map(getModuleName)))
-.config(($stateProvider, $urlRouterProvider) => {
+.config(($urlRouterProvider, $mdThemingProvider ) => {
     $urlRouterProvider.otherwise('/home');
+
+    $mdThemingProvider.theme('default')
+    .primaryPalette('blue')
+    .accentPalette('orange');
 });
 
 
