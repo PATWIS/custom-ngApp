@@ -1,7 +1,7 @@
 import HomeCtrl from './home.controller';
 
 const HomeModule = angular.module('patwisApp.home', [])
-    .config(($stateProvider, $urlRouterProvider) => {
+    .config(($stateProvider) => {
         $stateProvider
             .state('home', {
                 url: '/home',
