@@ -10,11 +10,16 @@ let appDependencies = [
 ];
 
 let appModule = [
+    //Views
     require('./home/home.module'),
-    require('./navbar/navbar.module')
+    // Directives
+    require('./navbar/navbar.module'),
+    // Services
+    require('./home/services/search.service')
 ];
 
 angular.module('patwisApp', appDependencies.concat(appModule.map(getModuleName)))
+.constant('apiUrl', '//api.tvmaze.com')
 .config(($urlRouterProvider, $mdThemingProvider ) => {
     $urlRouterProvider.otherwise('/home');
 
