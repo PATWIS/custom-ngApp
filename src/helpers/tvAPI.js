@@ -1,7 +1,7 @@
 class TvAPI {
     constructor(apiUrl) {
         let _apiUrl = apiUrl;
-        this.createApiSearchUrl = ()=> _apiUrl + '/search/show';
+        this.createApiSearchUrl = ()=> `${_apiUrl}/search/shows`;
     }
 
     getApiSearchShowUrl() { 

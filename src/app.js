@@ -1,3 +1,7 @@
+import uiRouter from 'angular-ui-router';
+import ngMaterial from 'angular-material';
+import angular from 'angular';
+
 require ('./sass/main.scss');
 
 function getModuleName(module) {
@@ -11,16 +15,16 @@ let appDependencies = [
 
 let appModule = [
     //Views
-    require('./home/home.module'),
+    require('./home/home.module.js'),
     // Directives
-    require('./navbar/navbar.module'),
+    require('./navbar/navbar.module.js'),
     // Services
-    require('./home/services/search.service')
+    require('./home/services/search.service.js')
 ];
 
 angular.module('patwisApp', appDependencies.concat(appModule.map(getModuleName)))
 .constant('apiUrl', '//api.tvmaze.com')
-.config(($urlRouterProvider, $mdThemingProvider ) => {
+.config(/*@ngInject*/ ($urlRouterProvider, $mdThemingProvider ) => {
     $urlRouterProvider.otherwise('/home');
 
     $mdThemingProvider.theme('default')

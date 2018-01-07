@@ -1,1 +1,16 @@
-<div><p>Home View {{home.foo}}</p></div>
+<div layout="column">
+    <p>{{home.foo}}</p>
+    <div flex layout="row" layout-align="center center" layout-padding>
+        <form name='searchForm'>
+            <md-input-container>
+                <label>Movie Search:</label>
+                <input ng-model="home.searchValue" ng-change="home.onSearchChange(home.searchValue)" />
+            </md-input-container>
+        </form>
+    </div>
+    <md-diver></md-diver>
+    <p>{{home.foo}}</p>
+    <div flex>
+        <md-card ng-repeat="item in home.itemList" ng-click="onItemClick(item)">{{item.name}}</md-card>
+    </div>
+</div>

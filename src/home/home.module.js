@@ -1,7 +1,7 @@
-import HomeCtrl from './home.controller';
+import HomeCtrl from './home.controller.js';
 
 const HomeModule = angular.module('patwisApp.home', [])
-    .config(($stateProvider) => {
+    .config(/*@ngInject*/ function($stateProvider) {
         $stateProvider
             .state('home', {
                 url: '/home',
