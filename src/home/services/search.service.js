@@ -21,7 +21,7 @@ class SearchService extends TvApi {
             method: 'GET',
             url: this.getApiSearchShowUrl(),
             params: {
-                q: terms
+                q: term
             } 
         }
         return this.$http(configObject)
