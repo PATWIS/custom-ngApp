@@ -1,6 +1,6 @@
-import uiRouter from 'angular-ui-router';
-import ngMaterial from 'angular-material';
-import angular from 'angular';
+// import uiRouter from '@uirouter/angularjs';
+// import ngMaterial from 'angular-material';
+// import angular from 'angular';
 
 require ('./sass/main.scss');
 
