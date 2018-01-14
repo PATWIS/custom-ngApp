@@ -10,7 +10,12 @@
     </div>
     <md-diver></md-diver>
     <p>{{home.foo}}</p>
-    <div flex>
-        <md-card ng-repeat="item in home.itemList" ng-click="onItemClick(item)">{{item.name}}</md-card>
+    <div flex layout="row" layout-wrap layout-align="center center" >
+        <md-card class="home-card"
+                 ng-repeat="item in home.itemList" 
+                 ng-click="onItemClick(item)">
+                 
+                 <div class="home-movie-card" ng-style="{'background-image':'url('+ item.image.medium +')'}" ></div>
+                 <div class="home-movie-title"><span class="home-movie-tile-text">{{item.name}}</span></md-card></div>
     </div>
 </div>

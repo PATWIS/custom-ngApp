@@ -20,17 +20,14 @@ module.exports = function (env) {
       // path: 'C:\\Users\\Patryk\\Infoprojekt Sp. z o.o\\SPDevPWisniewski - testLibrary',
       filename: prod ? '[name].[chunkhash].js' : '[name].js'
     },
-    // devtool: prod ? "source-map" : "cheap-module-eval-source-map",
+    devtool: prod ? "source-map" : "cheap-module-eval-source-map",
     module: {
       rules: [
         {
           test: /\.js$/,
           exclude: /(node_modules)/,
           use: [
-            {
-              loader: 'ng-annotate-loader'
-            },
-            // 'ng-annotate-loader',
+            'ng-annotate-loader',
             {
             loader: 'babel-loader',
             options: {
