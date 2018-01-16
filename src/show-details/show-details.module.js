@@ -1,3 +1,5 @@
+import ShowDetailsCtrl from './show-details.controller.js'
+
 const showDetails = angular
 .module('patwisApp.showDetails', [])
 .config(function($stateProvider) {
@@ -5,7 +7,7 @@ const showDetails = angular
         .state('showDetails', {
             url: '/showDetails/:id',
             template: require('./show-details.html'),
-            controller: showDetailsCtrl,
+            controller: ShowDetailsCtrl,
             controllerAs: 'showDetails',
             params: {
                 item: null
