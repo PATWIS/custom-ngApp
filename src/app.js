@@ -1,7 +1,3 @@
-// import uiRouter from '@uirouter/angularjs';
-// import ngMaterial from 'angular-material';
-// import angular from 'angular';
-
 require ('./sass/main.scss');
 
 function getModuleName(module) {

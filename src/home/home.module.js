@@ -8,7 +8,7 @@ const HomeModule = angular.module('patwisApp.home', [])
                 url: '/home',
                 template: require('./home.html'),
                 controller: HomeCtrl,
-                controllerAs: 'home'
+                controllerAs: 'vm'
             });
     });
 

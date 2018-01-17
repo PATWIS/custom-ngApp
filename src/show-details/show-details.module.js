@@ -1,7 +1,9 @@
-import ShowDetailsCtrl from './show-details.controller.js'
+import ShowDetailsCtrl from './show-details.controller.js';
+import ShowDetailsService from './show-details.service.js';
 
 const showDetails = angular
 .module('patwisApp.showDetails', [])
+.service('ShowDetailsService', ShowDetailsService)
 .config(function($stateProvider) {
     $stateProvider
         .state('showDetails', {

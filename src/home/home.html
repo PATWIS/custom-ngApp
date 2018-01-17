@@ -4,17 +4,15 @@
         <form name='searchForm'>
             <md-input-container>
                 <label>Movie Search:</label>
-                <input ng-model="home.searchValue" ng-change="home.onSearchChange(home.searchValue)" />
+                <input ng-model="vm.searchValue" ng-change="vm.onSearchChange(vm.searchValue)" />
             </md-input-container>
         </form>
     </div>
     <md-diver></md-diver>
-    <p>{{home.foo}}</p>
     <div flex layout="row" layout-wrap layout-align="center center" >
         <md-card class="home-card"
-                 ng-repeat="item in home.itemList" 
-                 ng-click="onItemClick(item)">
-                 
+                 ng-repeat="item in vm.itemList" 
+                 ng-click="vm.onItemClick(item)">               
                  <div class="home-movie-card" ng-style="{'background-image':'url('+ item.image.medium +')'}" ></div>
                  <div class="home-movie-title"><span class="home-movie-tile-text">{{item.name}}</span></md-card></div>
     </div>
