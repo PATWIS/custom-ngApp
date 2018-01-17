@@ -16,6 +16,7 @@ let appDependencies = [
 let appModule = [
     //Views
     require('./home/home.module.js'),
+    require('./show-details/show-details.module.js'),
     // Directives
     require('./navbar/navbar.module.js'),
     // Services

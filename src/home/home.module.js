@@ -1,3 +1,4 @@
+require('./home.scss')
 import HomeCtrl from './home.controller.js';
 
 const HomeModule = angular.module('patwisApp.home', [])

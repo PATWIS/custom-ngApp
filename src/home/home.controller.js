@@ -20,6 +20,10 @@ class HomeCtrl {
                     .showToastNotification('Server error occured, try again later'));
     }
 
+    onItemClick(item) {
+        this.$state.go('showDetails', {item, id: item.id});
+    }
+
 }
 export default HomeCtrl;
 
