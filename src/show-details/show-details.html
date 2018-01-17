@@ -1,1 +1,16 @@
-hello
+<md-content>
+
+    <div style="text-align: center">
+        <h1>{{vm.show.name}}</h1>
+        <section>
+            <img ng-src="{{vm.show.image.medium}}">
+        </section>
+
+        <section>
+            <h2>Rating:</h2>
+            <p>{{vm.show.rating.average || '-'}}</p>
+        </section>
+    
+    </div>
+
+</md-content>

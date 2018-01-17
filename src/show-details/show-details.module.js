@@ -10,7 +10,7 @@ const showDetails = angular
             url: '/showDetails/:id',
             template: require('./show-details.html'),
             controller: ShowDetailsCtrl,
-            controllerAs: 'showDetails',
+            controllerAs: 'vm',
             params: {
                 item: null
             }
