@@ -5,11 +5,37 @@
         <section>
             <img ng-src="{{vm.show.image.medium}}">
         </section>
-
         <section>
             <h2>Rating:</h2>
             <p>{{vm.show.rating.average || '-'}}</p>
         </section>
+        <section>
+            <h2>Country:</h2>
+            <p>{{vm.show.country.name || '-'}}</p>
+        </section>
+        <section>
+            <h2>premiered:</h2>
+            <p>{{vm.show.premiered}}</p>
+        </section>
+        <section>
+            <h2>category:</h2>
+            <p>{{vm.show.genres.name.join(', ') || '-'}}</p>
+        </section>
+        <section>
+            <h2>runtine:</h2>
+            <p>{{vm.show.runtine}} min</p>
+        </section>
+        <section>
+            <h2>summary:</h2>
+            <p style="position: absolute; width: 50%; left: 25%">{{vm.show.summary || '-'}}</p>
+        </section>
+                
+        
+
+    
+                
+        
+
     
     </div>
 
